@@ -1,0 +1,22 @@
+<div id="content">
+
+  <div id="jobs-browser-controls">
+
+  </div>
+  <div id="jobs-browser">
+  <% @jobs.each do |job| %>
+      <div class="job-quickview-small-float">
+          <div class="job-quickview-info<%= job.created_at.to_date == Date.today ? ' badge' : '' %> ">
+              <span class="job-quickview-title"><%= job.title %></span><br>
+              <span class="job-quickview-employer"><%= Company.find(job.company_id).name %></span>
+          </div>
+          <div class="job-quickview-description"><%= job.description %></div>
+          <div class="job-quickview-menu" class="invisible">
+            <span><a href="#">Søk jobben</a> &nbsp; <a href="#">Følg</a>
+            <span class="job-quickview-date"><%= Company.find(job.company_id).created_at.strftime('%d/%m') %></span>
+          </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: Donkeys and Cookies
+
+two:
+  id: 2
+  name: Monkey Business

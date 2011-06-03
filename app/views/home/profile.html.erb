@@ -1,0 +1,19 @@
+<div id="content">
+
+  <div id="user-profile-controls">
+
+  </div>
+  <div id="user-profile">
+    <span id="user-profile-name">
+      <%= @user_profile.first_name << ' ' << @user_profile.last_name %>
+    </span>
+    <br>
+    <span id="user-profile-address">
+      <%= @user_profile.address << ', ' << @user_profile.postal_code %>
+      <%= @user_profile.place << ', ' << @user_profile.subdivision_1 %>
+    </span>
+    <br>
+    <h1>Min aktivitet</h1>
+      
+  </div>
+</div>

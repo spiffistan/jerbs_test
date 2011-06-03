@@ -1,0 +1,23 @@
+development:
+  adapter: mysql
+  database: spectrum_dev
+  username: spectrum_dev
+  password: EJtdCvhctAupxDrJ
+  host: localhost
+  encoding: utf8
+  collation: utf8_general_ci
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: mysql
+  database: spectrum
+  username: spectrum
+  password: LxPNAHXycbbYFThu 
+  host: localhost
+  encoding: utf8
+  collation: utf8_general_ci

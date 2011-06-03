@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  title: Head donkey hunter
+  description: We are looking for someone to fill the much needed position of head donkey hunter at our jurassic zoo.
+  salary: 500000
+  company_id: 1
+  user_id: 1
+
+two:
+  id: 2
+  title: Chief Oreos(tm) Dipper
+  description: Our oreos recently became stale due to inadequate dipping prior to our eating, and desperately seek someone to help us out with the process.
+  salary: 850000
+  company_id: 1
+  user_id: 1
+
+three:
+  id: 3
+  title: Master swordman
+  description: Our last swordsman tragically met his fate last week, now we need another. Chimps need not apply.
+  salary: 1200000
+  company_id: 2
+  user_id: 1
+
+four:
+  id: 4
+  title: Homeopathic test subject 
+  description: We are seeking several test subjects for our ongoing clinical trial. Must be able to drink a LOT of water-
+  salary: 10000 
+  company_id: 1
+  user_id: 1
+
+five:
+  id: 5
+  title: Pretender to the British Throne 
+  description: An army was recently raised in Scotland, and now we need to defend our beloved England. The right candidate will be eligeble for accession to the throne.
+  salary: 850000000
+  company_id: 1
+  user_id: 1

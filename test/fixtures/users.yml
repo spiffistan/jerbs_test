@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#
+anders:
+  id: 1
+  email: anders@capasit.net
+  encrypted_password: f3bc61a3e3169e14534201784f4edd4dec69b6a2

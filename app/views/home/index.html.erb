@@ -1,0 +1,51 @@
+
+
+<div id="content">
+    <div id="left-pane" class="pane">
+      <h1>Finn en jobb</h1>
+        <form id="search-form">
+          <input type="text" id="search-jobs" name="q" value="Søk" title="Søk" class="clear-focus" autocomplete="off" />
+          <div id="search-type">
+            <input type="radio" name="field" value="jobs.title" checked> Tittel &nbsp;
+            <input type="radio" name="field" value="jobs.description"> Beskrivelse &nbsp;
+            <input type="radio" name="field" value="companies.name"> Arbeidsgiver
+          </div>
+        </form>
+        <div id="search-jobs-results">
+
+        </div>
+    </div>
+    <div id="middle-pane" class="pane">
+      <h1>Utvalgte nye jobber</h1>
+        <% @new_jobs.each do |job| %>
+      <div class="job-quickview">
+          <div class="job-quickview-info<%= job.created_at.to_date == Date.today ? ' badge' : '' %> ">
+              <span class="job-quickview-title"><%= job.title %></span><br>
+              <span class="job-quickview-employer"><%= job.company_name %></span>
+          </div>
+          <div class="job-quickview-description"><%= job.description %></div>
+          <div class="job-quickview-menu" class="invisible">
+            <span><a href="#">Søk jobben</a> &nbsp; <a href="#">Følg</a>
+            <span class="job-quickview-date"><%= job.created_at.strftime('%d/%m') %></span>
+          </div>
+      </div>
+    <% end %>
+    </div>
+    <div id="right-pane" class="pane">
+        <% if user_signed_in? %>
+            <div id="activity-box">
+                <h1>Min aktivitet</h1>
+            </div>
+      <% else %> 
+          <div id="info-box">
+             <h1>Jerbs</h1>
+             <p>Jerbs er en side hvor jobbsøkere, freelancere, oppdrags&ndash;
+             og arbeidsgivere kan registrere seg for å enkelt komme i kontakt med hverandre.</p>
+              <%= link_to "Opprett konto", new_user_registration_path, :class => "signup-button awesome green large" %>
+          </div>
+          <div id="offer-job-box">
+              <%= render :partial => 'offer_job' %>
+          </div>
+      <% end %>
+    </div>
+  </div>

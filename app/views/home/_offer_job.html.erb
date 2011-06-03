@@ -1,0 +1,83 @@
+<h1>Tilby jobb</h1>
+
+
+<form id="employer-form">
+
+
+  <div id="register-button-container">
+  <p id="employer-intro">Du kan registere deg som arbeidsgiver ved å fylle ut et kort skjema. 
+  Du vil da bli lagt til i databasen, du kan legge til stillinger eller oppdrag og du blir varslet når noen melder interresse.</p>
+      <a class="awesome large yellow" id="register-employer">Registrer arbeidsgiver</a>
+      <div id="recruiter-notice">
+          Representerer du et rekrutteringsbyrå? Send oss en <a href="mailto:doodad">mail</a>.
+      </div>
+  </div>
+
+  <div id="employer-form-part-1" class="form-part" style="display:none">
+    <h3>Kontaktinfo</h3> 
+    <input type="text" value="E-post" title="E-post" class="clear-focus" style="width: 290px" />
+    <input type="text" value="Passord" title="Passord" class="clear-focus" style="width: 290px" />
+    <input type="text" value="Passord igjen" title="Passord igjen" class="clear-focus" style="width: 290px" />
+    <input type="text" value="Fornavn" title="Fornavn" class="clear-focus" style="width: 130px" />
+    <input type="text" value="Etternavn" title="Etternavn" class="clear-focus" style="width: 145px; margin-right: 0" />
+
+    <h3>Firmainfo</h3> 
+    <input type="text" value="Firmanavn" title="Firmanavn" class="clear-focus" style="width: 290px" />
+    <input type="text" value="Firmaadresse" title="Firmaadresse" class="clear-focus" style="width: 290px" />
+    <input type="text" value="URL" title="URL" class="clear-focus" style="width: 290px" />
+
+    <select name="fylke" style="width: 150px">
+      <option>Oslo</option>
+      <option>Akershus</option>
+      <option>Rogaland</option>
+      <option>Hordaland</option>
+      <option>Sør-Trøndelag</option>
+    </select>
+
+    <select name="Kommune" style="width: 140px">
+      <option>Oslo</option>
+      <option>Akershus</option>
+      <option>Rogaland</option>
+      <option>Hordaland</option>
+      <option>Sør-Trøndelag</option>
+    </select>
+
+    <input type="text" value="Organisasjonsnummer" title="Organisasjonsnummer" title="Organisasjonsnummer" class="clear-focus" style="width:170px" />
+
+    <a class="awesome large yellow" id="register-employer-next-1" style="float: right; margin-right: 15px; margin-top: 10px;">Neste</a>
+
+  </div>
+
+  <div id="employer-form-part-2" class="form-part"  style="display:none">
+    <h3>Hva driver firmaet med?</h3>
+    <div style="float: left; clear: both">
+      <select name="industry">
+        <option>Programmering</option>
+        <option>Systemutvikling</option>
+        <option>Databehandling</option>
+      </select>
+    </div>
+    <div style="float: left; clear: both">
+      <h3>Kort beskrivelse av firmaet (maks 250 tegn)</h3>
+      <textarea name="description" style="height: 200px; width: 280px;"></textarea>
+      <a class="awesome large yellow" id="register-employer-next-2" style="float: right; margin-top: 10px;">Opprett konto</a>
+    </div>
+  </div>
+
+  <div id="employer-form-part-3" class="form-part" style="display:none">
+    Du har nå opprettet en konto hos Jerbs! Trykk på knappen under for å legge til din første stillingsutlysning!
+    <a class="awesome large purple" id="register-employer-next-3" style="float: right; margin-top: 10px;">Legg til en stilling</a>
+    <!-- TODO session -->
+  </div>
+
+  <div id="employer-form-part-4" class="form-part" style="display:none">
+    <input type="text" value="Tittel" title="Tittel" class="clear-focus" style="width: 290px" />
+    <h3>Stillingsbeskrivelse</h3>
+    <textarea name="description" style="height: 300px; width: 280px;"></textarea>
+    <input type="text" value="Lønn" title="Lønn" class="clear-focus" style="width: 290px" />
+    <input type="text" value="Frist" title="Frist" class="clear-focus" style="width: 290px" />
+    <a class="awesome large yellow" id="register-employer-next-3" style="float: right; margin-top: 10px;">Legg til</a>
+  </div>
+
+</form>
+

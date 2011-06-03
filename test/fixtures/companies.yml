@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+capasit:
+  id: 1
+  name: Capasit Heavy Industries
+  address: 1 True Ring Road
+  place: Brandywine
+  subdivision_1: Shire
+  subdivision_2: 
+  country: Middle-earth
+  postal_code: 4542
+  web_address: www.capasit.net
+  org_number: 343234242
+  industry_id: 1  
+
+ellediller:
+  id: 2
+  name: Ellediller Ltd
+  address: Krokofantveien
+  place: Oslo
+  subdivision_1: Oslo
+  subdivision_2: 
+  country: Norway
+  postal_code: 4123
+  web_address: www.ellediller.com
+  org_number: 330232222
+  industry_id: 2

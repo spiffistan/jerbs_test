@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+fast:
+  id: 1
+  name: Fast
+
+deltid:
+  id: 2
+  name: Deltid
