@@ -5,7 +5,7 @@ one:
   title: Head donkey hunter
   description: We are looking for someone to fill the much needed position of head donkey hunter at our jurassic zoo.
   salary: 500000
-  company_id: 1
+  company_id: 3
   user_id: 1
 
 two:
@@ -38,4 +38,28 @@ five:
   description: An army was recently raised in Scotland, and now we need to defend our beloved England. The right candidate will be eligeble for accession to the throne.
   salary: 850000000
   company_id: 1
+  user_id: 1
+
+six:
+  id: 6
+  title: Stunt Professional for part in Rambo VII 
+  description: Sylvester Stallone is getting far too old to perform his old stunts, now we need someone to take his part.
+  salary: 550000
+  company_id: 1
+  user_id: 1
+
+seven:
+  id: 7
+  title: Garbage Disposer / Laser Operator 
+  description: My arch-nemesis, Mr. Bond got away again. Help us out by operating our lasers.
+  salary: 2300000
+  company_id: 1
+  user_id: 1
+
+eight:
+  id: 8
+  title: Electrician
+  description: Our fence recently malfunctioned and we need repairs to keep the raptors out. Make haste.
+  salary: 8500000
+  company_id: 3
   user_id: 1

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110603084858) do
+ActiveRecord::Schema.define(:version => 20110604120129) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(:version => 20110603084858) do
     t.integer  "industry_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "counties", :force => true do |t|
+    t.string "name"
   end
 
   create_table "industries", :force => true do |t|
@@ -52,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20110603084858) do
 
   create_table "jobs", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.string   "salary"
     t.date     "deadline"
     t.integer  "job_type_id"
@@ -62,17 +66,31 @@ ActiveRecord::Schema.define(:version => 20110603084858) do
     t.datetime "updated_at"
   end
 
+  create_table "municipalities", :force => true do |t|
+    t.string  "name"
+    t.integer "county_id"
+  end
+
+  add_index "municipalities", ["county_id"], :name => "index_municipalities_on_county_id"
+
+  create_table "post_codes", :primary_key => "post_code", :force => true do |t|
+    t.string  "place"
+    t.integer "municipality_id"
+  end
+
+  add_index "post_codes", ["municipality_id"], :name => "index_post_codes_on_municipality_id"
+
   create_table "user_profiles", :force => true do |t|
-    t.integer  "user_id",                    :null => false
-    t.string   "first_name",                 :null => false
-    t.string   "last_name",                  :null => false
+    t.integer  "user_id",      :null => false
+    t.string   "first_name",   :null => false
+    t.string   "last_name",    :null => false
     t.string   "address"
     t.string   "place"
-    t.string   "subdivision_1"
-    t.string   "subdivision_2"
+    t.string   "post_code"
+    t.string   "municipality"
+    t.string   "county"
     t.string   "country"
-    t.string   "postal_code"
-    t.integer  "facebook_id",   :limit => 8
+    t.integer  "company_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

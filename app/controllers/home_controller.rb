@@ -4,6 +4,8 @@ class HomeController < ApplicationController
      :joins => "LEFT JOIN `companies` on companies.id = jobs.company_id ",
      :select => "jobs.title, jobs.description, jobs.created_at, companies.name AS company_name",
      :limit => 3)
+
+    @counties = County.find(:all, :order => :name)
   end
 
   def browse

@@ -32,9 +32,35 @@ $(document).ready(function() {
   });
 
   $('.search-result').click(function() {
-    alert();
     $('.search-result-more',this).show();
+  });
 
+  $('#counties-select').change(function() {
+    $.getJSON('/api/municipality/by_county.json/' + $('option:selected', this).val(), function(data) {
+      $('#municipalities-select').empty();
+      $.each(data, function(i, item) {
+        $('#municipalities-select').append('<option>' + item.municipality.name);
+      });
+    });
+  });
+
+  $('#post-code').keyup(function() {
+
+    var postcode = $(this);
+
+    postcode.css('background-color', 'white');    
+
+    if($(this).val().length != 4) return;
+
+
+    $.getJSON('/api/post_code/info.json/' + $(this).val(), function(data) {
+
+      $('#counties-select').val(data.post_code.county).attr('selected', true);
+      $('#counties-select').trigger('change');
+      postcode.css('background-color', 'lightgreen');
+      //$('#municipalities-select').val(data.post_code.municipality).attr('selected', true);
+
+    });
   });
 
   var clearMePrevious = '';
@@ -64,6 +90,7 @@ function doAjaxSearch() {
     $('#search-jobs-results').empty();
     if(data.length > 0)
       $('#search-jobs-results').append('<div style="margin-bottom: 10px">' + data.length + ' resultat' + (data.length > 1 ? 'er' : ''));
+
     $.each(data, function(i, item) {
       $('#search-jobs-results').append(
         '<div class="search-result" onclick="toggleSearchMore(this)">'

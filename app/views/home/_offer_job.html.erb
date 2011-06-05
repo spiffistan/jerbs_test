@@ -1,6 +1,5 @@
 <h1>Tilby jobb</h1>
 
-
 <form id="employer-form">
 
 
@@ -23,23 +22,15 @@
 
     <h3>Firmainfo</h3> 
     <input type="text" value="Firmanavn" title="Firmanavn" class="clear-focus" style="width: 290px" />
-    <input type="text" value="Firmaadresse" title="Firmaadresse" class="clear-focus" style="width: 290px" />
+    <input type="text" value="Firmaadresse" title="Firmaadresse" class="clear-focus" style="width: 175px" />
+    <input type="text" value="Postnummer" title="Postnummer" id="post-code" class="clear-focus" style="width: 100px; margin-right: 0" />
     <input type="text" value="URL" title="URL" class="clear-focus" style="width: 290px" />
 
-    <select name="fylke" style="width: 150px">
-      <option>Oslo</option>
-      <option>Akershus</option>
-      <option>Rogaland</option>
-      <option>Hordaland</option>
-      <option>Sør-Trøndelag</option>
+    <select id="counties-select" style="width: 150px">
+    <%= options_from_collection_for_select @counties, 'id', 'name' %>
     </select>
 
-    <select name="Kommune" style="width: 140px">
-      <option>Oslo</option>
-      <option>Akershus</option>
-      <option>Rogaland</option>
-      <option>Hordaland</option>
-      <option>Sør-Trøndelag</option>
+    <select id="municipalities-select" style="width: 140px">
     </select>
 
     <input type="text" value="Organisasjonsnummer" title="Organisasjonsnummer" title="Organisasjonsnummer" class="clear-focus" style="width:170px" />

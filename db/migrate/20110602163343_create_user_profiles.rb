@@ -6,12 +6,12 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.string :last_name, :null => false
       t.string :address
       t.string :place
-      t.string :subdivision_1
-      t.string :subdivision_2
+      t.string :post_code
+      t.string :municipality
+      t.string :county
       t.string :country
-      t.string :postal_code
 
-      t.column :facebook_id, 'bigint'
+      # t.column :facebook_id, 'bigint'
 
       t.references :company
 

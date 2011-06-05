@@ -4,13 +4,18 @@ Spectrum::Application.routes.draw do
   
   get "job/search"
 
-  resources :job 
+  resources :job
+
   
   get "home/index"
   match "browse" => "home#browse"
   match "profile" => "home#profile"
   
   root :to => "home#index"
+
+  #get "api/municipality/post_code(.:format)/:post_code", :controller => "municipality", :action => "lookup"
+  get "api/municipality/by_county(.:format)/:county_id", :controller => "municipality", :action => "lookup"
+  get "api/post_code/info(.:format)/:post_code", :controller => "post_code", :action => "lookup"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

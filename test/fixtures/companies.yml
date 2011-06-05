@@ -16,7 +16,7 @@ capasit:
 ellediller:
   id: 2
   name: Ellediller Ltd
-  address: Krokofantveien
+  address: Krokofantveien 12
   place: Oslo
   subdivision_1: Oslo
   subdivision_2: 
@@ -24,4 +24,17 @@ ellediller:
   postal_code: 4123
   web_address: www.ellediller.com
   org_number: 330232222
+  industry_id: 2
+
+jurassica:
+  id: 3
+  name: Jurassica NUF
+  address: Krokofantveien 13
+  place: Oslo
+  subdivision_1: Oslo
+  subdivision_2: 
+  country: Norway
+  postal_code: 4123
+  web_address: www.jurassica.nuf
+  org_number: 330232223
   industry_id: 2

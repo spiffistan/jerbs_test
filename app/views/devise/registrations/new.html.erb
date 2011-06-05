@@ -1,5 +1,6 @@
 <h2>Opprett konto</h2>
 
+<% resource.build_user_profile %>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -11,6 +12,25 @@
 
   <p><%= f.label :password_confirmation, 'Passord igjen' %><br />
   <%= f.password_field :password_confirmation %></p>
+
+  <%= f.fields_for :user_profile do |p| %>
+
+    <p><%= p.label :first_name, 'Fornavn' %><br />
+    <%= p.text_field :first_name %></p>
+    
+    <p><%= p.label :last_name, 'Etternavn' %><br />
+    <%= p.text_field :last_name %></p>
+  
+    <p><%= p.label :address, 'Adresse' %><br />
+    <%= p.text_field :address %></p>
+    
+    <p><%= p.label :place, 'Sted' %><br />
+    <%= p.text_field :place %></p>
+    
+    <p><%= p.label :post_code, 'Postkode' %><br />
+    <%= p.text_field :post_code %></p>
+
+  <% end %>
 
   <p><%= f.submit "Opprett konto" %></p>
 <% end %>
